@@ -75,8 +75,6 @@ if (isset($_POST['validate_order'])) {
 
         unset($_SESSION['cart']);
 
-        echo "تم تأكيد الطلب بنجاح!";
-
 
     } catch (Exception $e) {
         $pdo->rollBack();
