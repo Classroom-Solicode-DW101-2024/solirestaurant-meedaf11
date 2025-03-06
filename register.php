@@ -2,8 +2,6 @@
 
 require 'config.php';
 
-session_start();
-
 if(isset($_POST['register'])){
 
     $firstName = trim($_POST['first_name']);

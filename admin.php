@@ -1,10 +1,19 @@
 <?php
-
-require 'config.php';
 session_start();
 
+require 'config.php';
 
+if (!isset($_SESSION['isAdminLogin']) || $_SESSION['isAdminLogin'] !== true) {
+    header('Location: admin_login.php');
+    exit;
+}
 
+if (isset($_POST['logout'])) {
+    session_unset();
+    session_destroy();
+    header('Location: admin.php');
+    exit;
+}
 ?>
 
 <!DOCTYPE html>
@@ -26,6 +35,10 @@ session_start();
             <li><a href="?section=clients">👥 Clients</a></li>
             <li><a href="?section=commandes">📦 Commandes</a></li>
         </ul>
+
+        <form method="POST" action="" class="logout-form">
+            <button type="submit" name="logout" class="logout-btn">Logout</button>
+        </form>
     </aside>
 
     <main class="content">
@@ -39,11 +52,11 @@ session_start();
                 include "admin_commandes.php";
             } elseif ($section === "statistiques") {
                 include "admin_statistiques.php";
-            } else {
-                echo "<h2>Bienvenue dans l'administration</h2>";
+            } else {  
+                include "admin_statistiques.php";
             }
         } else {
-            echo "<h2>Bienvenue dans l'administration</h2>";
+            include "admin_statistiques.php";
         }
         ?>
     </main>

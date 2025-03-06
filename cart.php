@@ -1,6 +1,5 @@
 <?php
 require 'config.php';
-session_start();
 
 if (!isset($_SESSION['isLoggin']) || !$_SESSION['isLoggin']) {
     header('Location: login.php');

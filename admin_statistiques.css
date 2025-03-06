@@ -1,0 +1,97 @@
+*{
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+body{
+    background-color: rgb(253, 241, 227);
+    font-family: 'Poppins';
+}
+
+.StatisticsDashboard{
+    width: 100%;
+    height: 30vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.StatisticsDashboard .statsCarts{
+
+    width: 22%;
+    height: 80%;
+    background-color: white;
+    box-shadow: 0 0 4px rgb(112, 112, 112);
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+
+}
+
+.StatisticsDashboard .statsCarts h3{
+
+    font-size: 1.2rem;
+
+}
+
+.StatisticsDashboard .statsCarts span{
+
+    font-weight: 600;
+
+}
+
+.statisticsOrdersOfToday , .showPlatByDay{
+
+    width: 100%;
+    padding: 18px;
+    margin-top: 2vh;
+    display: flex;
+    flex-direction: column;align-items: center;
+    gap: 8px;
+
+}
+
+
+
+.showPlatByDay form {
+    width: 100%;
+    display: flex;
+    gap: 32px;   
+    justify-content: space-evenly; 
+    margin-bottom: 16px;
+}
+
+.showPlatByDay form .dateContainer {
+
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.showPlatByDay form .dateContainer input{
+
+    width: 20vw;
+    height: 30px;
+    padding: 0 8px;
+    border-radius: 8px;
+    border: 1px solid black;
+
+}
+
+.showPlatByDay form #submitDate{
+    width: 20vw;
+    height: 30px;
+    background-color: bisque;
+    border-radius: 16px;
+    border: none;
+    box-shadow: 0 0 6px rgb(112, 112, 112) ;
+
+}
