@@ -220,6 +220,7 @@ foreach($plats as $plat){
     
 
 <a href="cart.php"><img src="img/addToCart.png" alt=""></a>
+<span class="cart-count"><?= count($_SESSION['cart']) ?></span>
 <button name="logout">Logout</button>
 </form>
 
